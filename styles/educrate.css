@@ -1,0 +1,154 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  background: #000;
+  color: #fff;
+  line-height: 1.6;
+}
+
+/* HERO */
+.hero {
+  min-height: 100vh;
+  padding: 4rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background: radial-gradient(circle at top, #1a73e8aa, #000 70%);
+}
+
+.logo-holder img {
+  width: 120px;
+  margin-bottom: 2rem;
+}
+
+.hero h1 {
+  font-size: 3.8rem;
+  color: #1a73e8;
+}
+
+.hero p {
+  max-width: 720px;
+  margin-top: 1.5rem;
+  opacity: 0.85;
+}
+
+/* BLOCK SECTIONS */
+.block {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  padding: 6rem 3rem;
+  align-items: center;
+}
+
+.block.reverse {
+  direction: rtl;
+}
+
+.block.reverse * {
+  direction: ltr;
+}
+
+.block h2 {
+  font-size: 2.5rem;
+  color: #1a73e8;
+}
+
+.block p {
+  margin-top: 1rem;
+  opacity: 0.8;
+}
+
+.block img {
+  width: 100%;
+  border-radius: 16px;
+}
+
+/* FEATURES */
+.features {
+  padding: 6rem 3rem;
+  text-align: center;
+}
+
+.features h2 {
+  font-size: 2.5rem;
+  color: #1a73e8;
+  margin-bottom: 3rem;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+
+.feature {
+  padding: 1.5rem;
+  border: 1px solid #1a73e830;
+  border-radius: 14px;
+  background: #1a73e808;
+}
+
+/* CLOSING */
+.closing {
+  padding: 6rem 2rem;
+  text-align: center;
+  background: #1a73e8;
+  color: #000;
+}
+
+.closing h2 {
+  font-size: 2.5rem;
+}
+
+.closing p {
+  margin-top: 1rem;
+  font-weight: 500;
+}
+
+/* FOOTER */
+.footer {
+  background: #111;
+  color: #fff;
+  padding: 3rem 2rem;
+  text-align: center;
+  border-top: 1px solid #1a73e830;
+}
+
+.footer h3 {
+  color: #1a73e8;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.footer p {
+  margin: 0.5rem 0;
+  opacity: 0.85;
+}
+
+.footer a {
+  color: #1a73e8;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.8rem;
+  }
+
+  .block {
+    grid-template-columns: 1fr;
+    padding: 4rem 2rem;
+  }
+}

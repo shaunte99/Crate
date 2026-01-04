@@ -1,0 +1,206 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+body {
+  background: #fff;
+  color: #000;
+}
+
+/* NAV */
+.nav {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background: rgba(0,0,0,0.85);
+  backdrop-filter: blur(10px);
+  z-index: 100;
+}
+
+.nav-inner {
+  max-width: 1200px;
+  margin: auto;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-logo {
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+  color: #fff;
+}
+
+.nav-links a {
+  margin-left: 2rem;
+  color: #fff;
+  text-decoration: none;
+  opacity: 0.7;
+}
+
+.nav-links a:hover {
+  opacity: 1;
+}
+
+/* HERO */
+.hero {
+  height: 100vh;
+  background: #000;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.grid-bg {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+.hero-content {
+  text-align: center;
+  z-index: 2;
+}
+
+.hero h1 {
+  font-size: 6rem;
+  letter-spacing: 4px;
+}
+
+.hero p {
+  margin-top: 1rem;
+  opacity: 0.8;
+  font-size: 1.4rem;
+}
+
+.scroll {
+  display: block;
+  margin-top: 3rem;
+  opacity: 0.5;
+}
+
+/* SECTIONS */
+section {
+  padding: 8rem 2rem;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.about h2,
+.cta h2 {
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+}
+
+.about p,
+.cta p {
+  font-size: 1.2rem;
+  max-width: 700px;
+}
+
+/* BRANDS */
+.brands {
+  display: grid;
+  gap: 3rem;
+}
+
+.brand {
+  padding: 3rem;
+  border-radius: 24px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.brand:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 40px 80px rgba(0,0,0,0.2);
+}
+
+.brand h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.brand button {
+  margin-top: 2rem;
+  padding: 0.8rem 1.6rem;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* BRAND COLORS */
+.webcrate {
+  background: #00B140;
+  color: #fff;
+}
+
+.webcrate button {
+  color: #00B140;
+}
+
+.educrate {
+  background: linear-gradient(135deg, #00AEEF, #000);
+  color: #fff;
+}
+
+.educrate button {
+  color: #00AEEF;
+}
+
+.brightpath {
+  background: linear-gradient(135deg, #FFF176, #00AEEF);
+}
+
+.brightpath button {
+  background: #000;
+  color: #FFF176;
+}
+
+/* CTA */
+.cta {
+  background: #000;
+  color: #fff;
+  border-radius: 32px;
+}
+
+/* FOOTER */
+footer {
+  padding: 4rem;
+  text-align: center;
+  background: #111;
+  color: #777;
+}
+
+/* REVEAL */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: 1s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 4rem;
+  }
+
+  .nav-links {
+    display: none;
+  }
+}
