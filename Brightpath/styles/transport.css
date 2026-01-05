@@ -130,3 +130,66 @@
   .map{ height:300px; }
   .driver-actions{ flex-direction:column; }
 }
+
+/* ================= Student Tracking UI ================= */
+
+.student-tracker {
+  background: white;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.07);
+  margin-top: 22px;
+}
+
+.student-tracker h3 {
+  font-size: 1.3rem;
+  font-weight: 800;
+  margin-bottom: 16px;
+}
+
+.student-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.student-card {
+  background: #f5f7ff;
+  padding: 12px 14px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.3s;
+  border-left: 4px solid royalblue;
+}
+
+.student-card:hover {
+  transform: scale(1.01);
+}
+
+.student-name {
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.status-tag {
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 13px;
+  border: none;
+  cursor: pointer;
+  color: white;
+  transition: .3s ease;
+}
+
+/* Status Colors */
+.status-tag[data-status="pending"] {
+  background: #d4a017;
+}
+.status-tag[data-status="picked"] {
+  background: #2ecc71;
+}
+.status-tag[data-status="dropped"] {
+  background: #3498db;
+}

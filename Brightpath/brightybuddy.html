@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Brighty's Buddy Chat</title>
+  <link rel="stylesheet" href="styles/brightybuddy.css" />
+</head>
+<body>
+  <!-- HEADER -->
+  <header>
+    <div class="container header-container">
+      <div class="logo" id="homeBtn">
+        <img src="logo-img.png" alt="Brighty's Buddy" class="logo-img" onerror="this.style.display='none'" />
+        <div>
+          <div class="bright">Brighty’s</div>
+          <div class="path">Buddy</div>
+        </div>
+      </div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#">Grades</a></li>
+          <li><a href="#">Resources</a></li>
+          <li><a href="#">WhatsApp</a></li>
+        </ul>
+      </nav>
+      <div>
+        <a class="cta-btn" id="openChat">Open chat</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN CHAT SECTION -->
+  <main class="chat-main container">
+    <section class="chat-panel">
+      <div class="chat-header">
+        <div class="logo small">
+          <div class="bright">Brighty’s</div>
+          <div class="path">Buddy</div>
+        </div>
+        <div class="chat-actions">
+          <button class="btn-secondary" id="clearBtn">Clear</button>
+        </div>
+      </div>
+
+      <div class="chat-area">
+        <div class="sidebar">
+          <h4>Quick Options</h4>
+          <button class="option" data-action="phonics">Phonics Help</button>
+          <button class="option" data-action="numeracy">Numeracy Help</button>
+          <button class="option" data-action="lesson">Create Lesson Plan</button>
+          <button class="option" data-action="worksheet">Make Worksheet</button>
+          <button class="option" data-action="story">Tell a Short Story</button>
+        </div>
+
+        <div class="chat">
+          <div class="messages" id="messages"></div>
+
+          <div class="composer">
+            <input id="userInput" placeholder="Ask Brighty something..." autocomplete="off" />
+            <button id="sendBtn" class="cta-btn">Send</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container footer-grid">
+      <div class="footer-logo">
+        <img src="logo-img.png" alt="logo" class="logo-img" onerror="this.style.display='none'" />
+        <div class="designed-by">Built for teachers and learners</div>
+      </div>
+      <div class="footer-links">
+        <ul>
+          <li><a href="#">Docs</a></li>
+          <li><a href="#">WhatsApp setup</a></li>
+          <li><a href="#">Support</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <p>Need custom features? Ping me.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="scripts/brightybuddy.js"></script>
+</body>
+</html>

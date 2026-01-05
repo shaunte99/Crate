@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>BrightPath — Secure Payment</title>
+  <link rel="stylesheet" href="styles/payment.css" />
+</head>
+<body>
+  <!-- Header (BrightPath) -->
+  <header>
+    <div class="container header-container">
+      <div class="logo">
+        <img src="images/IMG-20251020-WA0029.jpg" alt="BrightPath Logo" class="logo-img" />
+        <span class="bright">Bright</span><span class="path">Path</span>
+      </div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+      <a href="tutors.html" class="cta-btn">Book a Tutor</a>
+      <div class="mobile-menu-icon">&#9776;</div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="payment-hero">
+    <div class="container hero-container">
+      <div class="hero-text">
+        <h1>Secure Checkout</h1>
+        <p class="muted">Fast, secure and trusted payments for sessions, transport and subscriptions.</p>
+      </div>
+      <div class="hero-graphic">
+        <img src="images/tutor2.png" alt="BrightPath payments" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Payment area -->
+  <main class="container payment-wrap">
+    <section class="payment-card">
+
+      <!-- left: card preview -->
+      <div class="card-preview-wrap">
+        <div class="card-preview">
+          <div class="card-front">
+            <div class="chip"></div>
+            <div class="brand">BRIGHTPATH</div>
+            <div class="preview-number">•••• •••• •••• ••••</div>
+            <div class="preview-row">
+              <div class="preview-name">CARD HOLDER</div>
+              <div class="preview-expiry">MM/YY</div>
+            </div>
+          </div>
+
+          <div class="card-back">
+            <div class="magnetic"></div>
+            <div class="signature">
+              <div class="sig-line">CARD HOLDER</div>
+              <div class="sig-cvv">CVV</div>
+            </div>
+            <div class="back-brand">BrightPath</div>
+          </div>
+        </div>
+
+        <div class="trust-badges">
+          <div class="badge">Secure SSL</div>
+          <div class="badge">PCI Compliant</div>
+          <div class="badge">24/7 Support</div>
+        </div>
+      </div>
+
+      <!-- right: form -->
+      <div class="card-form-wrap">
+        <div class="payment-header">
+          <h2>Payment details</h2>
+          <p class="muted">We keep your card data secure. Enter card details below to complete payment.</p>
+        </div>
+
+        <form id="payment-form" class="payment-form" novalidate>
+
+          <div class="form-group">
+            <label for="card-name">Cardholder name</label>
+            <input id="card-name" data-field type="text" placeholder="" autocomplete="cc-name" />
+            <div class="error-message"></div>
+          </div>
+
+          <div class="form-group">
+            <label for="card-number">Card number</label>
+            <input id="card-number" data-field type="text" inputmode="numeric" placeholder="1234 5678 9012 3456" maxlength="19" autocomplete="cc-number" />
+            <div class="card-icons">
+              <img src="images/visa.jpg" alt="visa" />
+              <img src="images/mastercard.jpg" alt="mastercard" />
+            </div>
+            <div class="error-message"></div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group small">
+              <label for="expiry">Expiry</label>
+              <input id="expiry" data-field type="text" inputmode="numeric" placeholder="MM/YY" maxlength="5" autocomplete="cc-exp" />
+              <div class="error-message"></div>
+            </div>
+
+            <div class="form-group small">
+              <label for="cvv">CVV</label>
+              <input id="cvv" data-field type="password" inputmode="numeric" placeholder="123" maxlength="4" autocomplete="cc-csc" />
+              <div class="error-message"></div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="amount">Amount (ZAR)</label>
+            <div class="amount-row">
+              <input id="amount" data-field type="number" min="1" step="0.01" value="1050" />
+              <div class="currency">ZAR</div>
+            </div>
+            <div class="error-message"></div>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input id="email" data-field type="email" placeholder="parent@example.com" autocomplete="email" />
+            <div class="error-message"></div>
+          </div>
+
+          <div class="form-actions">
+            <button type="submit" class="btn-primary">Pay R <span id="display-amount"></span></button>
+          </div>
+
+        </form>
+
+        <div class="success-message" style="display:none">
+          <h3>Payment complete</h3>
+          <p>Thanks — your payment was processed. A receipt has been sent to your email.</p>
+          <a href="index.html" class="btn-secondary">Back to Home</a>
+        </div>
+
+      </div>
+
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-grid">
+      <div class="footer-logo">
+        <img src="images/IMG-20251020-WA0029.jpg" alt="BrightPath Logo" class="logo-img">
+        <span class="bright">Bright</span><span class="path">Path</span>
+        <p>Guiding learners to success</p>
+        <p class="designed-by">Designed by WebCrate</p>
+      </div>
+      <div class="footer-contact">
+        <h3>Contact Us</h3>
+        <p>Email: brightpathaftercare@gmail.com</p>
+        <p>Phone: 084 532 5730</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="scripts/payment.js"></script>
+</body>
+</html>
